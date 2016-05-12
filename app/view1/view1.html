@@ -1,1 +1,45 @@
-<p>This is the partial for view 1.</p>
+<!DOCTYPE html>
+<html lang="en-US">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+<body>    
+
+	<div ng-app="myApp" ng-controller="namesCtrl">
+
+		<table style="float: left; border: solid 1px;">
+			<tr> 
+				<th>
+					ID
+				</th>
+				<th>
+					Task
+				</th>
+				<th>
+					Time
+				</th>
+			</tr>
+
+			<tr ng-repeat="x in tasks"> 
+				
+				<td>
+					{{x.eID}}
+				</td>
+				<td>
+					{{x.task}}
+				</td>
+				<td>
+					{{x.time}}
+				</td>
+
+			</tr>
+
+		</table>
+
+	</div>
+
+	<script src="week2.js"> 
+
+	</script>
+
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+           
+    
+    <script  src=http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js>
+    </script> 
+    
+    <body>
+<div ng-app="show-demo-employees">
+        
+         <div  ng-controller="Web2ListEmployees">
+                    <h1><p> {{title}} </p></h1>
+            <p>
+                    <li ng-repeat="employee in employees">
+                             {{employee.name}} : {{employee.id}} : {{employee.email}} : {{employee.phone}}
+
+                    </li>
+            </p>
+        </div> 
+</div>
+       
+
+
+      <script src="viewEmployees.js"></script>
+    
+    </body>
+    
+    
+</html>

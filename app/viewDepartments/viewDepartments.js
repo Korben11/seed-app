@@ -8,6 +8,9 @@ angular.module('myApp.viewDepartments',['ngRoute'])
 	 	controller: 'ViewDepartmentsCtrl'
 	 });
 }])
-	 .controller('ViewDepartmentsCtrl', [function(){
-	 	 
+	 .controller('ViewDepartmentsCtrl', [function($scope, $http){
+	 	 $http.get('viewDepartments.json')
+       .then(function(res){
+          $scope.departments = res.data;                
+        });
 }])

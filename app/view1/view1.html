@@ -1,2 +1,53 @@
+<<<<<<< HEAD
 <p>This is the partial for view 1.</p>
 <p>hahahaaa</p>
+=======
+
+<!DOCTYPE html>
+<html lang="en-US">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+<body>    
+
+	<div ng-app="myApp" ng-controller="namesCtrl">
+
+		<table style="float: left; border: solid 1px;">
+			<tr style="border: solid 1px"> 
+				<th> 
+					ID
+				</th>
+				<th>
+					Task
+				</th>
+				<th>
+					Time
+				</th>
+			</tr>
+
+			<tr ng-repeat="x in tasks"> 
+				
+				<td style="border: solid 1px; margin: 3px">
+					{{x.eID}}
+				</td>
+				<td style="border: solid 1px;  margin: 3px">
+					{{x.task}}
+				</td>
+				<td style="border: solid 1px;  margin: 3px">
+					{{x.time}}
+				</td>
+
+			</tr>
+
+		</table>
+
+	</div>
+
+	<script src="week2.js"> 
+
+	</script>
+
+
+</body>
+</html>
+
+
+>>>>>>> origin/Linh

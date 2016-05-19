@@ -6,8 +6,8 @@
 	<div ng-app="myApp" ng-controller="namesCtrl">
 
 		<table style="float: left; border: solid 1px;">
-			<tr> 
-				<th>
+			<tr style="border: solid 1px"> 
+				<th> 
 					ID
 				</th>
 				<th>
@@ -20,13 +20,13 @@
 
 			<tr ng-repeat="x in tasks"> 
 				
-				<td>
+				<td style="border: solid 1px; margin: 3px">
 					{{x.eID}}
 				</td>
-				<td>
+				<td style="border: solid 1px;  margin: 3px">
 					{{x.task}}
 				</td>
-				<td>
+				<td style="border: solid 1px;  margin: 3px">
 					{{x.time}}
 				</td>
 

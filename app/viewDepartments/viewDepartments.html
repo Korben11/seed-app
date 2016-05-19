@@ -1,6 +1,6 @@
 <p>This is the partial for view departments.</p>
 
-<div ng-repeat="department in departments">
+<div ng-controller="ViewDepartmentsCtrl">
 <ul>
     <li ng-repeat="dep in departments">
       {{dep.department}} - <em>{{dep.done}}</em>

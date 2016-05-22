@@ -8,6 +8,11 @@ angular.module('myApp.viewDepartments',['ngRoute'])
 	 	controller: 'ViewDepartmentsCtrl'
 	 });
 }])
-	 .controller('ViewDepartmentsCtrl', [function(){
-	 	 
-}])
+	 .controller('ViewDepartmentsCtrl', ['$scope', function($scope){
+          $scope.departments = [
+          						{ "department":"learn angular", "done":true },
+								{ "department":"build an angular app", "done":false},
+								{ "department":"something", "done":false },
+								{ "department":"another todo", "done":true }
+								];                
+        }]);

@@ -1,5 +1,15 @@
- var app=angular.module('show-demo-employees', []);
-            app.controller("Web2ListEmployees", function($scope)
+'use strict';
+
+angular.module('myApp.viewEmployees', ['ngRoute'])
+
+.config(['$routeProvider', function($routeProvider) {
+  $routeProvider.when('/viewEmployees', {
+    templateUrl: 'viewEmployees/viewEmployees.html',
+    controller: 'Web2ListEmployees'
+  });
+}])
+
+.controller("Web2ListEmployees", function($scope)
             {
 
                         $scope.title = "Employee List";
@@ -17,5 +27,4 @@
 
                       ];
             }
-    
-)
+);

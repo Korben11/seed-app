@@ -4,7 +4,13 @@
       <h1><p> {{title}} </p></h1>
       <p>
         <li ng-repeat="employee in employees">
-                 {{employee.name}} : {{employee.id}} : {{employee.email}} : {{employee.phone}}
+                <li><b>Name: </b>{{employee.name}} </li>
+                <li><b>Id: </b>{{employee.id}} </li>
+                <li><b>Email: </b>{{employee.email}} </li>
+                <li><b>Phone: </b>{{employee.phone}} </li>
+                <li><b>Age: </b>{{employee.age}} </li>
+                <li><b>Children's name: </b><span ng-repeat="children in employee.children">{{children}} </span></li>
+                
 
         </li>
       </p>

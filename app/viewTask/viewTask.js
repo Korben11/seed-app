@@ -13,7 +13,10 @@ angular.module('myApp.view1', ['ngRoute'])
 
 }])
 .controller('namesCtrl', function($scope){
-	$scope.tasks = [
+	$scope.tasks = companyTask;
+});
+
+var Task = [
         {eID:'1',task:'Cleanning', time:'17h-18h'},
         {eID:'2',task:'Cleanning', time:'17h-18h'},
         {eID:'3',task:'Office', time:'8h-16h'},
@@ -24,5 +27,4 @@ angular.module('myApp.view1', ['ngRoute'])
         {eID:'8',task:'scheduling', time:'12h'},
         {eID:'9',task:'Watching', time:'8h-16h'},
         {eID:'10',task:'watching', time:'8h-16h'},
-    ];
-});
+    ]

@@ -1,0 +1,20 @@
+<div ng-app="show-demo-employees">
+        
+   <div  ng-controller="Web2ListEmployees">
+      <h1> {{title}}</h1>
+      
+        <ul ng-repeat="employee in employees">
+                <li><b>Name: </b>{{employee.name}} </li>
+                <li><b>Id: </b>{{employee.id}} </li>
+                <li><b>Age: </b>{{employee.age}} </li>
+                <li><b>Children's name: </b><span ng-repeat="children in employee.children">{{children}} </span></li>
+                <li><b>Phone: </b>{{employee.phone}} </li>
+                <li><b>Email: </b>{{employee.email}} </li>
+                
+                
+                
+
+        </ul>
+     
+  </div>
+</div> 

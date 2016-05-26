@@ -1,22 +1,22 @@
 'use strict';
 
-angular.module('myApp.view1', ['ngRoute'])
+angular.module('myApp.viewTask', ['ngRoute'])
 
 .config(['$routeProvider', function($routeProvider) {
-  $routeProvider.when('/view1', {
-    templateUrl: 'view1/view1.html',
-    controller: 'View1Ctrl'
+  $routeProvider.when('/viewTask', {
+    templateUrl: 'viewTask/viewTask.html',
+    controller: 'ViewTaskCtrl'
   });
 }])
 
-.controller('View1Ctrl', [function() {
+.controller('ViewTaskCtrl', [function() {
 
 }])
-.controller('namesCtrl', function($scope){
+.controller('namesCtrl', ['$scope', function($scope){
 	$scope.tasks = companyTask;
-});
+}]);
 
-var Task = [
+var companyTask = [
         {eID:'1',task:'Cleanning', time:'17h-18h'},
         {eID:'2',task:'Cleanning', time:'17h-18h'},
         {eID:'3',task:'Office', time:'8h-16h'},

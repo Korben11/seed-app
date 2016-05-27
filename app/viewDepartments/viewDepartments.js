@@ -25,10 +25,10 @@ angular.module('myApp.viewDepartments',['ngRoute'])
 	 	 	templateUrl: 'viewDepartments/department-info.html'
 	 	 }; 
 	 })
-	 .directive('departmentReviews', function () {
+	 .directive('departmentReview', function () {
 	 	 return{
-	 	 	restrict: 'E',
-	 	 	templateUrl: 'viewDepartments/department-reviews.html'
+	 	 	restrict: 'A',
+	 	 	templateUrl: 'viewDepartments/department-review.html'
 	 	 }; 
 	 })
 	 .directive('departmentReviewForm', function () {

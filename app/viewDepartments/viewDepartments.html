@@ -2,43 +2,14 @@
 
 <div ng-controller="ViewDepartmentsCtrl">
 	<ul ng-repeat="dep in departments">
-		<li><b>Department:</b> {{dep.name}}</li>
-		<li><b>Description:</b> {{dep.description}}</li>
-		<li><b>Number of employys:</b> {{dep.people}}</li>
-		<li><b>Fields:</b> <span ng-repeat="field in dep.fields">{{field}} </span></li>
-		<li><b>Avarage salary: </b> {{dep.avarageSalary | currency}}</li>
-		<li><b>Contact:</b> {{dep.contact}}</li>
+	<!-- department-info -->
+	<department-info></department-info>		
 		<br>
 		<h4>Reviews</h4>
-              <li ng-repeat="review in dep.reviews">
-                <blockquote>
-                  {{review.body}}
-                  <cite>—{{review.author}}</cite>
-                </blockquote>
-              </li>
-              <!--  Review Form -->
-	            <form name="reviewForm" ng-controller="ReviewController as revCtrl" ng-submit="reviewForm.$valid && revCtrl.addReview(dep)" novalidate>
-	              <!--  Live Preview -->
-	              <blockquote>
-	                {{revCtrl.review.body}}
-                	<cite>-{{revCtrl.review.author}}</cite>
-	              </blockquote>
-
-	              <!--  Review Form -->
-	              <h4>Submit a Review</h4>
-	              <fieldset>
-	                <textarea ng-model="revCtrl.review.body" class="form-control" placeholder="Write a short review of the department..." title="Review" required></textarea>
-	              </fieldset>
-	              <fieldset class="form-group">
-	                <input ng-model="revCtrl.review.author" type="email" class="form-control" placeholder="jimmyDean@example.org" title="Email" required />
-	              </fieldset>
-	              <div>
-	              	From is {{reviewForm.$valid}}
-	              </div>
-	              <fieldset class="form-group">
-	                <input type="submit" class="btn btn-primary pull-right" value="Submit Review" />
-	              </fieldset>
-	            </form>
+		<!-- department-reviews -->
+		<department-reviews></department-reviews>
+	      <!--  Review Form - department -->
+	    <department-review-form></department-review-form>
 		<br>
 		<br>
 	</ul>

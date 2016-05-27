@@ -18,6 +18,24 @@ angular.module('myApp.viewDepartments',['ngRoute'])
 	 		 dep.reviews.push(this.review);
 	 		 this.review = {};
 	 	};
+	 })
+	 .directive('departmentInfo', function () {
+	 	 return{
+	 	 	restrict: 'E',
+	 	 	templateUrl: 'viewDepartments/department-info.html'
+	 	 }; 
+	 })
+	 .directive('departmentReviews', function () {
+	 	 return{
+	 	 	restrict: 'E',
+	 	 	templateUrl: 'viewDepartments/department-reviews.html'
+	 	 }; 
+	 })
+	 .directive('departmentReviewForm', function () {
+	 	 return{
+	 	 	restrict: 'E',
+	 	 	templateUrl: 'viewDepartments/department-review-form.html'
+	 	 }; 
 	 });
 
 	 var companyDepartments = [{

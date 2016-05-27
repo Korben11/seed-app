@@ -9,5 +9,34 @@
 		<li><b>Avarage salary: </b> {{dep.avarageSalary | currency}}</li>
 		<li><b>Contact:</b> {{dep.contact}}</li>
 		<br>
+		<h4>Reviews</h4>
+              <li ng-repeat="review in dep.reviews">
+                <blockquote>
+                  {{review.body}}
+                  <cite>—{{review.author}}</cite>
+                </blockquote>
+              </li>
+              <!--  Review Form -->
+	            <form name="reviewForm" ng-controller="ReviewController as revCtrl" ng-submit="revCtrl.addReview(dep)">
+	              <!--  Live Preview -->
+	              <blockquote>
+	                {{revCtrl.review.body}}
+                	<cite>-{{revCtrl.review.author}}</cite>
+	              </blockquote>
+
+	              <!--  Review Form -->
+	              <h4>Submit a Review</h4>
+	              <fieldset>
+	                <textarea ng-model="revCtrl.review.body" class="form-control" placeholder="Write a short review of the product..." title="Review"></textarea>
+	              </fieldset>
+	              <fieldset class="form-group">
+	                <input ng-model="revCtrl.review.author" type="email" class="form-control" placeholder="jimmyDean@example.org" title="Email" />
+	              </fieldset>
+	              <fieldset class="form-group">
+	                <input type="submit" class="btn btn-primary pull-right" value="Submit Review" />
+	              </fieldset>
+	            </form>
+		<br>
+		<br>
 	</ul>
 </div>

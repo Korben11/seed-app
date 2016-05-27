@@ -11,14 +11,6 @@ angular.module('myApp.viewDepartments',['ngRoute'])
 	 .controller('ViewDepartmentsCtrl', ['$scope', function($scope){
           $scope.departments = companyDepartments;                
         }])
-	 .controller('ReviewController', function(){
-	 	this.review = {};
-
-	 	this.addReview = function (dep) {
-	 		 dep.reviews.push(this.review);
-	 		 this.review = {};
-	 	};
-	 })
 	 .directive('departmentInfo', function () {
 	 	 return{
 	 	 	restrict: 'E',
@@ -34,7 +26,16 @@ angular.module('myApp.viewDepartments',['ngRoute'])
 	 .directive('departmentReviewForm', function () {
 	 	 return{
 	 	 	restrict: 'E',
-	 	 	templateUrl: 'viewDepartments/department-review-form.html'
+	 	 	templateUrl: 'viewDepartments/department-review-form.html',
+	 	 	controller: function(){
+	 	 		this.review = {};
+
+	 			this.addReview = function (dep) {
+	 		 		dep.reviews.push(this.review);
+	 		 		this.review = {};
+	 			};
+	 	 	},
+	 	 	controllerAs: 'revCtrl'
 	 	 }; 
 	 });
 

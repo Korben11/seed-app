@@ -1,4 +1,4 @@
-<div ng-controller="namesCtrl">
+<div ng-controller="viewTask">
 	<table cellpadding="2" cellspacing="2" border="1">
 		<tr style="border: solid 1px"> 
 			<th> 
@@ -25,11 +25,33 @@
 				{{x.time}}
 			</td>
 			<td>
-			<a href="#" ng-click="del(x.eID)">Delete</a>
-			<a href="#" ng-click="selectEdit(Task.ID)">Edit</a>
+				<a href="#" ng-click="del(x)">Delete</a>
+				<a href="#" ng-click="edit(x)">Edit</a>
+			</td>			
+		</tr>
 
+		<tr> 
+			<th>
+
+			</th>
+			<th>			
+				<button ng-click="add(current)">Add new user</button>
+			</th>
+			<th> 
+				<button ng-click="save(current)">Save</button>
+
+			</th>	
+			
+		</tr>
+
+		<tr>
+		<td></td>
+			<td>
+				<input type="text" id="task" ng-model="current.task" value="{{current.task}}">
+				<input type="text" id="time" ng-model="current.time" value="{{current.time}}">
 			</td>
 		</tr>
+
 	</table>
 </div>
 

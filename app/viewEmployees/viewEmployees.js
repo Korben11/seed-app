@@ -13,7 +13,7 @@ angular.module('myApp.viewEmployees', ['ngRoute'])
           $scope.employees = companyEmployees;                
         }]);
 
- 
+
         var companyEmployees = [{
             name: "John Smith",
             id: 123456,

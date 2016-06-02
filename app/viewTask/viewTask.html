@@ -1,5 +1,5 @@
 <div ng-controller="namesCtrl">
-	<table style="float: left; border: solid 1px;">
+	<table cellpadding="2" cellspacing="2" border="1">
 		<tr style="border: solid 1px"> 
 			<th> 
 				ID
@@ -10,16 +10,24 @@
 			<th>
 				Time
 			</th>
+			<th>
+				Option
+			</th>
 		</tr>
 		<tr ng-repeat="x in tasks"> 
-			<td style="border: solid 1px; margin: 3px">
+			<td>
 				{{x.eID}}
 			</td>
-			<td style="border: solid 1px;  margin: 3px">
+			<td>
 				{{x.task}}
 			</td>
-			<td style="border: solid 1px;  margin: 3px">
+			<td >
 				{{x.time}}
+			</td>
+			<td>
+			<a href="#" ng-click="del(x.eID)">Delete</a>
+			<a href="#" ng-click="selectEdit(Task.ID)">Edit</a>
+
 			</td>
 		</tr>
 	</table>
